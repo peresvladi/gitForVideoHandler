@@ -177,7 +177,7 @@ function handlerInputNow(a, e, u, z) {
 }
 
 function textSave(e, u) {
-    const data = e; const a = document.createElement('a'); const blob = new Blob([JSON.stringify(data)]); a.href = URL.createObjectURL(blob); a.download = 'fuel' + u  + '_' + fCD('-','cYcMcD') + '_' + fCT('-','cHrcMi') + '_' + fSM('_','cSecMl'); a.click();
+    const data = e; const a = document.createElement('a'); const blob = new Blob([JSON.stringify(data)]); a.href = URL.createObjectURL(blob); a.download = 'fuel' + u + '_' + fCD('-', 'cYcMcD') + '_' + fCT('-', 'cHrcMi') + '_' + fSM('_', 'cSecMl'); a.click();
 }
 
 // (arr, window.localStorage, namePartVCatalog);
@@ -402,22 +402,6 @@ document.getElementById("topic").onchange = function () { //функция за�
     addStarlocalStorage(document.getElementById("topic").value, document.getElementById("topic").name.slice(1)); //строка кода вызывает функцию addStarlocalStorage
     window.location.reload(); // строка кода перезагружает окно браузера
 };
-
-function definingTheHierarchicalLeveloftheDirectory() {
-    let startDirectory = ""
-    let startDir = "../"
-    let directoryPath = window.location.pathname;
-    ar = [];
-    ar = directoryPath.split("/");
-    let i = 2;
-    while (ar[ar.length - i] !== "EDUCATION") {
-        startDirectory = startDirectory + startDir;
-        i++;
-    }
-    return startDirectory;
-}
-
-
 
 document.onkeydown = go_key;
 function go_key(event) {
